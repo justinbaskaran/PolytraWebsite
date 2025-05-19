@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Polytra | One Chatbot. All Your Data.</title>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f6f9fc;
+      color: #333;
+    }
+
+    header {
+      background-color: #0f172a;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      margin: 0;
+    }
+
+    header p {
+      font-size: 1.2em;
+      margin-top: 10px;
+    }
+
+    section {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .highlight {
+      background-color: #e0f2fe;
+      padding: 20px;
+      border-left: 5px solid #0284c7;
+      border-radius: 8px;
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      margin-top: 0;
+    }
+
+    form {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1em;
+    }
+
+    .g-recaptcha {
+      margin-bottom: 20px;
+    }
+
+    input[type="submit"] {
+      background-color: #0284c7;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1em;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #0369a1;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+      color: #666;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2em;
+      }
+
+      .highlight {
+        font-size: 0.95em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Polytra</h1>
+    <p>One Chatbot. All Your Data.</p>
+  </header>
+
+  <section>
+    <div class="highlight">
+      <h2>What is Polytra?</h2>
+      <p>Polytra is a powerful integration layer that turns your database into a smart assistant. We install a custom stored procedure that streams your structured data into a natural language processing model — giving you a single chatbot to query across any system, in plain language.</p>
+    </div>
+
+    <h2>Contact Us</h2>
+    <form action="/send-email" method="POST">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Your full name" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="Your email address" required>
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" placeholder="Your message or questions" required></textarea>
+
+      <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY_HERE"></div>
+
+      <input type="submit" value="Send Message">
+    </form>
+  </section>
+
+  <footer>
+    &copy; 2025 Polytra. Built for curious problem-solvers.
+  </footer>
+</body>
+</html>
